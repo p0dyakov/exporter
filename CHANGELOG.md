@@ -1,3 +1,7 @@
+## [1.2.0] - 2022-01-08
+
+* fork the original package and update the version to null safety
+
 ## [1.1.0] - 2020-07-25
 
 * Updated dependencies, now extensions are can be auto exported without fake class trick

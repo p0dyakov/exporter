@@ -21,7 +21,7 @@ class ExportsBuilder implements Builder {
     ];
     if (content.isNotEmpty) {
       await buildStep.writeAsString(
-          AssetId(buildStep.inputId.package, 'lib/auto_export.dart'),
+          AssetId(buildStep.inputId.package, 'lib/export.dart'),
           content.join('\n'));
     }
   }

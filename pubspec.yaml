@@ -1,4 +1,4 @@
-name: flutter_auto_export
+name: auto_exporter
 description: A new Flutter package that allows you to auto export types globally.
 version: 1.1.0
 homepage: https://github.com/AlbertoMonteiro/FlutterAutoExport

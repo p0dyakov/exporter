@@ -1,5 +1,5 @@
 [![pub package](https://img.shields.io/pub/v/flutter_auto_export.svg)](https://pub.dev/packages/flutter_auto_export)
-# Flutter Auto Export
+# Auto Exporter
 
 A new Flutter package that allows you to auto export types globally.
 

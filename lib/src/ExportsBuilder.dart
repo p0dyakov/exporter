@@ -8,7 +8,7 @@ class ExportsBuilder implements Builder {
   @override
   // ignore: type_annotate_public_apis
   final buildExtensions = const {
-    r'$lib$': ['.dart']
+    r'$lib$': ['export.dart']
   };
   var packageName = "main";
   @override
@@ -29,7 +29,7 @@ class ExportsBuilder implements Builder {
     content.addAll(expList);
     if (content.isNotEmpty) {
       await buildStep.writeAsString(
-          AssetId(buildStep.inputId.package, 'lib/$packageName.dart'),
+          AssetId(buildStep.inputId.package, 'lib/export.dart'),
           content.join('\n'));
     }
   }

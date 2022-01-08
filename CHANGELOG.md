@@ -1,3 +1,7 @@
+## [1.2.2] - 2022-01-08
+
+* change the created file name to main.dart
+
 ## [1.2.1] - 2022-01-08
 
 * change the created file name to the package name

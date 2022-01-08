@@ -1,3 +1,7 @@
+## [1.2.1] - 2022-01-08
+
+* change the created file name to the package name
+
 ## [1.2.0] - 2022-01-08
 
 * fork the original package and update the version to null safety

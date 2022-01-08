@@ -14,16 +14,26 @@ class ExportsBuilder implements Builder {
   @override
   Future<void> build(BuildStep buildStep) async {
     final exports = buildStep.findAssets(Glob('**/*.exports'));
-    final content = [
-      "// GENERATED CODE - DO NOT MODIFY BY HAND",
-      "",
-      await for (var exportLibrary in exports)
-        "export '${exportLibrary.changeExtension('.dart').uri}';",
-    ];
-    if (content.isNotEmpty) {
-      await buildStep.writeAsString(
-          AssetId(buildStep.inputId.package, 'lib/main.dart'),
-          content.join('\n'));
+    late final String packageName;
+
+    final expList = <String>[];
+    final content = ["// GENERATED CODE - DO NOT MODIFY BY HAND", "", ""];
+    await for (var exportLibrary in exports) {
+      final expStr = "export '${exportLibrary.changeExtension('.dart').uri}';";
+      expList.add(expStr);
+      if (content[2] == "") {
+        packageName = expStr.split("/")[0].split("package:")[1];
+        content[2] = "// " + packageName;
+      }
     }
+
+    content.addAll(expList);
+    try {
+      if (content.isNotEmpty) {
+        await buildStep.writeAsString(
+            AssetId(buildStep.inputId.package, 'lib/$packageName.dart'),
+            content.join('\n'));
+      }
+    } catch (e) {}
   }
 }

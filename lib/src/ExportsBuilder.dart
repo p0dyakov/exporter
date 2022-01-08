@@ -1,6 +1,8 @@
 import 'dart:async';
-import 'package:glob/glob.dart';
+
+import 'package:auto_exporter/src/AutoExporter.dart';
 import 'package:build/build.dart';
+import 'package:glob/glob.dart';
 
 // ignore: public_member_api_docs
 class ExportsBuilder implements Builder {
@@ -21,7 +23,7 @@ class ExportsBuilder implements Builder {
     ];
     if (content.isNotEmpty) {
       await buildStep.writeAsString(
-          AssetId(buildStep.inputId.package, 'lib/export.dart'),
+          AssetId(buildStep.inputId.package, 'lib/${AutoExporter.name}.dart'),
           content.join('\n'));
     }
   }

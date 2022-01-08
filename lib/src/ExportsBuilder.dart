@@ -8,7 +8,7 @@ class ExportsBuilder implements Builder {
   @override
   // ignore: type_annotate_public_apis
   final buildExtensions = const {
-    r'$lib$': ['auto_export.dart']
+    r'$lib$': ['main.dart']
   };
 
   @override

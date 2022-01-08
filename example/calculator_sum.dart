@@ -1,4 +1,4 @@
-import 'package:flutter_auto_export/src/AutoExporter.dart';
+import 'package:auto_exporter/src/AutoExporter.dart';
 
 @AutoExporter()
 class CalculatorSum {

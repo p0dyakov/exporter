@@ -1,4 +1,4 @@
-library flutter_auto_export;
+library auto_exporter;
 
 import 'package:build/build.dart';
 

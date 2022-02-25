@@ -1,3 +1,8 @@
+## [1.3.1] - 2022-02-25
+
+* try to unexport the assets
+
+
 ## [1.3.0] - 2022-02-25
 
 * remove the AutoExporter

@@ -3,10 +3,9 @@ import 'dart:async';
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
 
-// ignore: public_member_api_docs
+/// visit all files to remember they path
 class ExporterGeneratorBuilder implements Builder {
   @override
-  // ignore: type_annotate_public_apis
   final buildExtensions = const {
     '.dart': ['.exports']
   };

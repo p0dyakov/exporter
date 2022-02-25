@@ -1,3 +1,7 @@
+## [1.3.0] - 2022-02-25
+
+* remove the AutoExporter
+
 ## [1.2.4] - 2022-01-08
 
 * change the created file name to main.dart

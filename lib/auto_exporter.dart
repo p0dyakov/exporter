@@ -5,8 +5,6 @@ import 'package:build/build.dart';
 import 'src/ExporterGeneratorBuilder.dart';
 import 'src/ExportsBuilder.dart';
 
-export 'package:auto_exporter/src/AutoExporter.dart';
-
 // ignore: public_member_api_docs
 const version = '1.0.2';
 

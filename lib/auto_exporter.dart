@@ -2,8 +2,8 @@ library auto_exporter;
 
 import 'package:build/build.dart';
 
-import 'src/ExporterGeneratorBuilder.dart';
-import 'src/ExportsBuilder.dart';
+import 'src/exporter_generator_builder.dart';
+import 'src/exports_builder.dart';
 
 /// return the ExporterGeneratorBuilder
 Builder exporterGeneratorBuilder(BuilderOptions options) {

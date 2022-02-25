@@ -7,11 +7,11 @@ class ExportsBuilder implements Builder {
   @override
   Map<String, List<String>> get buildExtensions {
     return {
-      r'$lib$': [packageName + '.dart']
+      r'$lib$': ['export.dart']
     };
   }
 
-  var packageName = "export";
+  static var packageName = "export";
   @override
   Future<void> build(BuildStep buildStep) async {
     final exports = buildStep.findAssets(Glob('**/*.exports'));
@@ -20,13 +20,15 @@ class ExportsBuilder implements Builder {
     final content = ["// GENERATED CODE - DO NOT MODIFY BY HAND", "", ""];
     await for (var exportLibrary in exports) {
       final export_uri = exportLibrary.changeExtension('.dart').uri;
-      if (export_uri.toString().substring(0, 6) != "assets") {
-        final expStr = "export '$export_uri';";
-        expList.add(expStr);
+      if (export_uri.toString().substring(0, 5) != "asset") {
+        if (export_uri.toString() != 'package:$packageName/$packageName.dart') {
+          final expStr = "export '$export_uri';";
+          expList.add(expStr);
 
-        if (content[2] == "") {
-          packageName = expStr.split("/")[0].split(":")[1];
-          content[2] = "// " + packageName;
+          if (content[2] == "") {
+            // packageName = expStr.split("/")[0].split(":")[1];
+            content[2] = "// " + packageName;
+          }
         }
       }
     }

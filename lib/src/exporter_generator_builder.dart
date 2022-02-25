@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:auto_exporter/src/exports_builder.dart';
 import 'package:build/build.dart';
 import 'package:source_gen/source_gen.dart';
 
@@ -20,6 +21,7 @@ class ExporterGeneratorBuilder implements Builder {
       for (var member in lib.allElements) {member.name},
     ];
     if (annotated.isNotEmpty) {
+      ExportsBuilder.packageName = buildStep.inputId.package;
       await buildStep.writeAsString(
           buildStep.inputId.changeExtension('.exports'), annotated.join(','));
     }

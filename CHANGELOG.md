@@ -1,3 +1,7 @@
+## [1.3.7] - 2022-02-25
+
+* fix cannot: do not export the project exporter
+
 ## [1.3.6] - 2022-02-25
 
 * do not export the project exporter

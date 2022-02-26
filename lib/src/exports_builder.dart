@@ -26,7 +26,7 @@ class ExportsBuilder implements Builder {
           expList.add(expStr);
 
           if (content[2] == "") {
-            // packageName = expStr.split("/")[0].split(":")[1];
+            packageName = expStr.split("/")[0].split(":")[1];
             content[2] = "// " + packageName;
           }
         }

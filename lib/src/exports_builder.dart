@@ -19,10 +19,10 @@ class ExportsBuilder implements Builder {
     final expList = <String>[];
     final content = ["// GENERATED CODE - DO NOT MODIFY BY HAND", "", ""];
     await for (var exportLibrary in exports) {
-      final export_uri = exportLibrary.changeExtension('.dart').uri;
-      if (export_uri.toString().substring(0, 5) != "asset") {
-        if (export_uri.toString() != 'package:$packageName/$packageName.dart') {
-          final expStr = "export '$export_uri';";
+      final exportUri = exportLibrary.changeExtension('.dart').uri;
+      if (exportUri.toString().substring(0, 5) != "asset") {
+        if (exportUri.toString() != 'package:$packageName/$packageName.dart') {
+          final expStr = "export '$exportUri';";
           expList.add(expStr);
 
           if (content[2] == "") {

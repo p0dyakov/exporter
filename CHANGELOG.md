@@ -1,3 +1,7 @@
+## [1.3.8] - 2022-02-25
+
+* try to remove source_gen
+
 ## [1.3.7] - 2022-02-25
 
 * fix cannot: do not export the project exporter

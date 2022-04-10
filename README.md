@@ -29,3 +29,5 @@ wait a minute... and you get the export file
 #### on the last
 
 rename you export.dart to your project name
+
+remember to run this:`dart format .`!

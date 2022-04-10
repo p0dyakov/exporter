@@ -17,7 +17,11 @@ class ExportsBuilder implements Builder {
     final exports = buildStep.findAssets(Glob('**/*.exports'));
 
     final expList = <String>[];
-    final content = ["// GENERATED CODE - DO NOT MODIFY BY HAND", "", ""];
+    final content = [
+      "// run this to reset your file: dart run build_runner build",
+      "// remenber to format this file, you can use: dart format .",
+      ""
+    ];
     await for (var exportLibrary in exports) {
       final exportUri = exportLibrary.changeExtension('.dart').uri;
       if (exportUri.toString().substring(0, 5) != "asset") {
@@ -25,10 +29,10 @@ class ExportsBuilder implements Builder {
           final expStr = "export '$exportUri';";
           expList.add(expStr);
 
-          if (content[2] == "") {
-            packageName = expStr.split("/")[0].split(":")[1];
-            content[2] = "// " + packageName;
-          }
+          // if (content[2] == "") {
+          //   packageName = expStr.split("/")[0].split(":")[1];
+          //   content[2] = "// " + packageName;
+          // }
         }
       }
     }

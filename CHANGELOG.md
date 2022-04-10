@@ -1,3 +1,7 @@
+## [1.4.0] - 2022-02-25
+
+* insert hint to exported file
+
 ## [1.3.8] - 2022-02-25
 
 * try to remove source_gen

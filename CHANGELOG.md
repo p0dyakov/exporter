@@ -1,3 +1,7 @@
+## [1.4.2] - 2022-02-25
+
+* update packages
+
 ## [1.4.1] - 2022-02-25
 
 * insert hint to exported file

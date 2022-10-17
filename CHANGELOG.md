@@ -1,3 +1,7 @@
+## [1.4.3] - 2022-10-17
+
+* update sub packages versions
+
 ## [1.4.2] - 2022-02-25
 
 * update packages

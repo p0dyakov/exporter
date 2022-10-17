@@ -4,18 +4,14 @@
 
 A Dart package that allows you to auto export types globally.
 
-## Getting Started
-
-See How to use it
-
 ## How to use it ?
 
-first:
+first: add those to `pubspec.yaml` 
 ```
 dev_dependencies:
-  auto_exporter: ^<lastest version code>
-  build_runner: ^2.1.0
-  build_test: ^2.1.0
+  auto_exporter: ^1.4.3
+  build_runner: ^2.3.0
+  build_test: ^2.1.5
 ```
 
 second run:
@@ -24,7 +20,9 @@ second run:
  flutter pub run build_runner build  # Flutter SDK
 ```
 
-wait a minute... and you get the export file
+wait a minute... and you get the export file.
+
+remove your export file and change the `export.dart` to your name.
 
 #### on the last
 

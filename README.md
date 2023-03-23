@@ -18,6 +18,7 @@ second run:
 ```
  dart run build_runner build  # Dart SDK
  flutter pub run build_runner build  # Flutter SDK
+ flutter packages pub run build_runner build # try this on error
 ```
 
 wait a minute... and you get the export file.
@@ -29,3 +30,7 @@ remove your export file and change the `export.dart` to your name.
 rename you export.dart to your project name
 
 remember to run this:`dart format .`!
+
+#### hint
+
+`dart pub publish --dry-run` to up your package to pub.dev
